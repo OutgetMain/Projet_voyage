@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<title>Bon Voyage</title>
+
+<header>
+  <h1 style="text-align:center"> Formulaire d'inscription </h1>
+</header>
+
+<nav style="text-align:center; background-color:LightGray">
+  <a href="/Accueil">Accueil</a>
+  <a href="/page_recherche">Page_recherche</a>
+</nav>
+
+<form method = "post" >
+  {% if not show_form %}
+    <button type="submit" name="connexion">Connexion</button>
+    <button type="submit" name="inscription">Inscription</button>
+  {% elif form_type == "connexion" %}
+    <label for="username">Identifiant :</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required><br><br>
+  {% elif form_type == "inscription" %}
+    <p>
+        Nom : <input type="text" name="nom"><br>
+        Prénom : <input type="text" name="prenom"><br>
+        Sexe : <input type="text" name="sexe"><br>
+        Âge : <input type="number" min="10" name="age"><br>
+        Nationalité : <input type="text" name="nationalite"><br>
+        Adresse : <input type="text" name="adresse"><br>
+        Téléphone : <input type="number" name="telephone"><br>
+        Mail : <input type="email" name="mail"><br>
+    </p>
+      {% endif %}
+</form>
+
+</html>
