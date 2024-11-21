@@ -8,5 +8,3 @@ conn=psycopg2.connect(
   password ="1234"
 )
 
-
-var = 55
