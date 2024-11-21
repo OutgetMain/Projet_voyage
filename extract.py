@@ -9,3 +9,4 @@ conn=psycopg2.connect(
 )
 
 
+var = 55
