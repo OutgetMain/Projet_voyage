@@ -21,9 +21,6 @@ CREATE TABLE client(
    prenom VARCHAR(50) NOT NULL,
    tel VARCHAR(50) NOT NULL,
    adresse VARCHAR(50) NOT NULL,
-   age VARCHAR(50) NOT NULL,
-   nationalite VARCHAR(50) NOT NULL,
-   mdp VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_utilisateur)
 
 );
@@ -153,10 +150,10 @@ CREATE TABLE participe(
    FOREIGN KEY(id_voyage) REFERENCES voyage(id_voyage) ON DELETE SET NULL
 );
 
-INSERT INTO client(nom, prenom, sexe, courriel, tel, adresse, mdp, age, nationalite)VALUES
-('Bertrand', 'Pierre', 'H', 'bertrand.pierre@gmail.com', '0634828293', '12 rue du cloché','1234', '19', 'FRANCE'),
-('Cléa', 'Pierre', 'H', 'clea.pierre@gmail.com', '0732549382', '1 avenue Beaubourg','1234', '20', 'ESPAGNE'),
-('Lore', 'Stamina', 'F', 'lore.stamina@gmail.com', '0692839562', '3 boulevard saint honoré','1234', '45', 'PORTUGAL');
+INSERT INTO client(nom, prenom, sexe, courriel, tel, adresse)VALUES
+('Bertrand', 'Pierre', 'H', 'bertrand.pierre@gmail.com', '0634828293', '12 rue du cloché'),
+('Cléa', 'Pierre', 'H', 'clea.pierre@gmail.com', '0732549382', '1 avenue Beaubourg'),
+('Lore', 'Stamina', 'F', 'lore.stamina@gmail.com', '0692839562', '3 boulevard saint honoré');
 
 
 INSERT INTO type_etape(valeur)VALUES
